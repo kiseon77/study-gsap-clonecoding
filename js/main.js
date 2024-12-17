@@ -178,3 +178,28 @@ window.onload = function () {
     })
     .to(".logoWrap", { top: "30%", ease: "none", duration: 5 });
 };
+
+let loading = document.querySelector(".loading");
+
+let rotate = document.querySelectorAll(".rotate");
+let opacity = document.querySelectorAll(".opacity");
+
+setTimeout(() => {
+  loading.classList.add("scene1");
+}, 0);
+setTimeout(() => {
+  loading.classList.add("scene2");
+}, 1300);
+setTimeout(() => {
+  loading.classList.remove("scene1", "scene2");
+}, 2000);
+setTimeout(() => {
+  rotate.forEach((rotate) => {
+    rotate.classList.add("on");
+  });
+}, 2000);
+setTimeout(() => {
+  opacity.forEach((opacity) => {
+    opacity.classList.add("on");
+  });
+}, 2000);
